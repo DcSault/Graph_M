@@ -1,9 +1,12 @@
 {
   "name": "graph_m",
   "version": "0.4.0",
-  "description": "",
+  "description": "Network Tools for analyse lan and wan",
   "main": "main.js",
   "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,9 +20,22 @@
   },
   "homepage": "https://github.com/DcSault/Graph_M#readme",
   "devDependencies": {
-    "electron": "^28.0.0"
+    "electron": "^28.0.0",
+    "electron-builder": "^23.0.0"
   },
   "dependencies": {
     "electron-updater": "^6.1.7"
+  },
+  "build": {
+    "appId": "com.app.graphm",
+    "productName": "Graph_M",
+    "directories": {
+      "output": "build"
+    },
+    "publish": [{
+      "provider": "github",
+      "owner": "DcSault",
+      "repo": "Graph_M"
+    }]
   }
 }
