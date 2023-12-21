@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+/* Ajoutez ces lignes pour le mode sombre */
+
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+.dark-mode .container {
+    background-color: #1f1f1f;
+}
+
+.dark-mode #chart {
+    background-color: #1f1f1f;
+}

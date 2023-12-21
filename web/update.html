@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="update.css">
+    <title>Mise à jour disponible</title>
+</head>
+<body>
+    <div class="update-container">
+        <h2>Mise à jour disponible</h2>
+        <p>Une mise à jour est disponible. Voulez-vous installer maintenant ?</p>
+        <button id="updateButton">Mettre à jour</button>
+    </div>
+    <script>
+        const { ipcRenderer } = require('electron');
+
+        document.getElementById('updateButton').addEventListener('click', () => {
+            ipcRenderer.send('start-update');
+        });
+    </script>
+</body>
+</html>
