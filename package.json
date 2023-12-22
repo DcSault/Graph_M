@@ -1,17 +1,17 @@
 {
   "name": "graph_m",
-  "version": "0.4.0",
-  "description": "Network Tools for analyse lan and wan",
+  "version": "0.4.3",
+  "description": "Network Tool for Lan and Wan Analyse",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "postinstall": "electron-builder install-app-deps",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dist": "electron-builder"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DcSault/Graph_M.git"
+    "url": "https://github.com/DcSault/Graph_M.git"
   },
   "author": "NotSault",
   "license": "ISC",
@@ -19,23 +19,33 @@
     "url": "https://github.com/DcSault/Graph_M/issues"
   },
   "homepage": "https://github.com/DcSault/Graph_M#readme",
-  "devDependencies": {
-    "electron": "^28.0.0",
-    "electron-builder": "^23.0.0"
-  },
-  "dependencies": {
-    "electron-updater": "^6.1.7"
-  },
   "build": {
-    "appId": "com.app.graphm",
+    "appId": "com.sault.graph_m",
     "productName": "Graph_M",
     "directories": {
       "output": "build"
     },
-    "publish": [{
+    "asar": true,
+    "asarUnpack": [
+      "**/node_modules/electron-updater/**"
+    ],
+    "publish": {
       "provider": "github",
+      "repo": "Graph_M",
       "owner": "DcSault",
-      "repo": "Graph_M"
-    }]
+      "private": false,
+      "releaseType": "release",
+      "publishAutoUpdate": true
+    }
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "electron-debug": "^3.2.0",
+    "electron-log": "^5.0.1",
+    "electron-updater": "^6.1.7"
+  },
+  "devDependencies": {
+    "electron": "^28.1.0",
+    "electron-builder": "^23.0.3"
   }
 }
