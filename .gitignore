@@ -4,9 +4,9 @@ web/*
 node_modules/*
 build/*
 app.js
+main.js
 darkmode.js
 index.html
-main.js
 styles.css
 package-lock.json
 package.json
