@@ -25,6 +25,7 @@
     "directories": {
       "output": "build"
     },
+    "icon": "icon.ico",
     "asar": true,
     "asarUnpack": [
       "**/node_modules/electron-updater/**"
